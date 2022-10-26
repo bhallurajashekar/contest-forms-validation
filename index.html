@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>registration-form-contest-1</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form class="ResistrationForm-validation" id="resistraionnn">
+      <h1 class="display-4" style="text-align: center">RegistrationForm</h1>
+      <div class="mb-3">
+        <label for="full-name" class="form-label">Full name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="full-name"
+          placeholder="please enter full name"
+          autocomplete="off"
+          required
+          onkeyup="validate()"
+        />
+        <div class="valid-feedback" id="full-name-valid">Looks good!</div>
+        <div class="invalid-feedback" id="full-name-invalid">
+          Please enter a valid full name
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="valid-gender" class="form-label">Gender</label>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          id="valid-gender"
+          required
+          onchange="validate()"
+        >
+          <option value="None" selected>Choose...</option>
+          <option value="MALE">MALE</option>
+          <option value="FEMALE">FEMALE</option>
+          <option value="OTHERS">OTHERS</option>
+        </select>
+        <div class="valid-feedback" id="gender-valid">Looks good!</div>
+        <div class="invalid-feedback" id="gender-invalid">
+          Please select a valid gender.
+        </div>
+      </div>
+      <div class="mb-3">
+        <h6>Hobbies</h6>
+          <div>
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="swimming-checkbox"
+            onclick="validate()"
+          />
+          <label class="form-check-label" for="swimming-checkbox">
+            Swimming
+          </label>
+        </div>
+
+        <div>
+        
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="reading-novels-checkbox"
+            onclick="validate()"
+          />
+          <label class="form-check-label" for="reading-novels-checkbox">
+            Reading novels
+          </label>
+        </div>
+
+        <div>
+        
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="dancing-checkbox"
+            onclick="validate()"
+          />
+          <label class="form-check-label" for="dancing-checkbox">
+            Dancing
+          </label>
+        
+        </div>
+
+
+        <div>
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="singing-checkbox"
+            onclick="validate()"
+          />
+          <label class="form-check-label" for="singing-checkbox">
+            Singing
+          </label>
+        </div>
+       
+        <div class="valid-feedback" id="hobbies-valid">Looks good!</div>
+        <div class="invalid-feedback" id="hobbies-invalid">
+          Please select atleast one hobby
+        </div>
+      </div>
+      <div class="col-12" style="text-align: center">
+        <button class="btn btn-dark" type="button" onclick="validate(true)">
+          Submit form
+        </button>
+      </div>
+    </form>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
